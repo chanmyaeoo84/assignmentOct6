@@ -6,6 +6,7 @@ import com.assignment.model.Animal;
 import com.assignment.model.Bird;
 import com.assignment.model.Chicken;
 import com.assignment.model.Duck;
+import com.assignment.model.Fish;
 import com.assignment.model.Parrot;
 import com.assignment.model.Rooster;
 import com.assignment.model.support.BirdSinging;
@@ -13,6 +14,8 @@ import com.assignment.model.support.Cluck;
 import com.assignment.model.support.CockDoodle;
 import com.assignment.model.support.Meow;
 import com.assignment.model.support.NoFly;
+import com.assignment.model.support.NoSing;
+import com.assignment.model.support.NoWalk;
 import com.assignment.model.support.Quack;
 import com.assignment.model.support.Woof;
 
@@ -111,6 +114,35 @@ public class AnimalBehaviorUnitTest {
 		Bird parrot=new Parrot();
 		parrot.setSingBehavior(new CockDoodle());
 		parrot.sing();
+	}
+	
+	/**
+	 * Method to test sing() method of Fish
+	 */
+	@Test
+	public void testFishSinging(){
+		Animal fish=new Fish();
+		fish.setSingBehavior(new NoSing());
+		fish.sing();
+	}
+	
+	/**
+	 * Method to test walk() method of Fish
+	 */
+	@Test
+	public void testFishWalking(){
+		Animal fish=new Fish();
+		fish.setWalkBehavior(new NoWalk());
+		fish.walk();
+	}
+	
+	/**
+	 * Method to test swim() method of Fish
+	 */
+	@Test
+	public void testFishSwimming(){
+		Animal fish=new Fish();
+		fish.swim();
 	}
 	
 }

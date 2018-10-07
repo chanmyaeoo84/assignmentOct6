@@ -1,6 +1,7 @@
 package com.assignment.model;
 
 import com.assignment.model.support.SingBehavior;
+import com.assignment.model.support.WalkBehavior;
 
 /**
  * Animal Base class
@@ -10,13 +11,14 @@ import com.assignment.model.support.SingBehavior;
  */
 public class Animal {
 	protected SingBehavior singBehavior;
+	protected WalkBehavior walkBehavior;
 	
 	public Animal() {
 
 	}
 
 	public void walk() {
-		System.out.println("I am walking.");
+		walkBehavior.walk();
 	}
 
 	public void sing() {
@@ -29,5 +31,9 @@ public class Animal {
 
 	public void setSingBehavior(SingBehavior singBehavior) {
 		this.singBehavior = singBehavior;
+	}
+
+	public void setWalkBehavior(WalkBehavior walkBehavior) {
+		this.walkBehavior = walkBehavior;
 	}
 }

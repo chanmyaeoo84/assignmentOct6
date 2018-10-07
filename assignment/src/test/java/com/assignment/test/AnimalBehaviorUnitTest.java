@@ -6,6 +6,7 @@ import com.assignment.model.Animal;
 import com.assignment.model.Bird;
 import com.assignment.model.Chicken;
 import com.assignment.model.ClownFish;
+import com.assignment.model.Dolphin;
 import com.assignment.model.Duck;
 import com.assignment.model.Fish;
 import com.assignment.model.Parrot;
@@ -14,6 +15,7 @@ import com.assignment.model.Shark;
 import com.assignment.model.support.BirdSinging;
 import com.assignment.model.support.Cluck;
 import com.assignment.model.support.CockDoodle;
+import com.assignment.model.support.ExpertSwim;
 import com.assignment.model.support.Meow;
 import com.assignment.model.support.NoFly;
 import com.assignment.model.support.NoSing;
@@ -22,7 +24,7 @@ import com.assignment.model.support.Quack;
 import com.assignment.model.support.Woof;
 
 /**
- * Test class for Animal Behavior
+ * Unit Test class for Animal Behavior
  * 
  * @author Chan Myae Oo
  *
@@ -171,6 +173,16 @@ public class AnimalBehaviorUnitTest {
 		System.out.println("Size is "+clownFish.getSize());
 		
 		System.out.println("Color is "+clownFish.getColor());
+	}
+	
+	/**
+	 * Method to test swim() method of Dolphin
+	 */
+	@Test
+	public void testDolphinSwimming(){
+		Animal dolphin=new Dolphin();
+		dolphin.setSwimBehavior(new ExpertSwim());
+		dolphin.swim();
 	}
 	
 }

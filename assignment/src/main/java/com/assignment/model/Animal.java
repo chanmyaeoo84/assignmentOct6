@@ -1,6 +1,7 @@
 package com.assignment.model;
 
 import com.assignment.model.support.SingBehavior;
+import com.assignment.model.support.SwimBehavior;
 import com.assignment.model.support.WalkBehavior;
 
 /**
@@ -9,12 +10,13 @@ import com.assignment.model.support.WalkBehavior;
  * @author Chan Myae Oo
  *
  */
-public class Animal {
+public abstract class Animal {
 	protected SingBehavior singBehavior;
 	protected WalkBehavior walkBehavior;
+	protected SwimBehavior swimBehavior;
 	
 	public Animal() {
-
+		setSwimBehavior(new NormalSwim());
 	}
 
 	public void walk() {
@@ -26,7 +28,7 @@ public class Animal {
 	}
 	
 	public void swim() {
-		System.out.println("I am swimming.");
+		swimBehavior.swim();
 	}
 
 	public void setSingBehavior(SingBehavior singBehavior) {
@@ -35,5 +37,9 @@ public class Animal {
 
 	public void setWalkBehavior(WalkBehavior walkBehavior) {
 		this.walkBehavior = walkBehavior;
+	}
+
+	public void setSwimBehavior(SwimBehavior swimBehavior) {
+		this.swimBehavior = swimBehavior;
 	}
 }

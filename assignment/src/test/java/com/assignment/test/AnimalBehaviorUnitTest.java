@@ -6,12 +6,15 @@ import com.assignment.model.Animal;
 import com.assignment.model.Bird;
 import com.assignment.model.Chicken;
 import com.assignment.model.Duck;
+import com.assignment.model.Parrot;
 import com.assignment.model.Rooster;
 import com.assignment.model.support.BirdSinging;
 import com.assignment.model.support.Cluck;
 import com.assignment.model.support.CockDoodle;
+import com.assignment.model.support.Meow;
 import com.assignment.model.support.NoFly;
 import com.assignment.model.support.Quack;
+import com.assignment.model.support.Woof;
 
 /**
  * Test class for Animal Behavior
@@ -78,6 +81,36 @@ public class AnimalBehaviorUnitTest {
 		Chicken rooster=new Rooster();
 		rooster.setSingBehavior(new CockDoodle());
 		rooster.sing();
+	}
+	
+	/**
+	 * Method to test sing() method of Parrot living with dogs
+	 */
+	@Test
+	public void testParrotLiveDogSinging(){
+		Bird parrot=new Parrot();
+		parrot.setSingBehavior(new Woof());
+		parrot.sing();
+	}
+	
+	/**
+	 * Method to test sing() method of Parrot living with cats
+	 */
+	@Test
+	public void testParrotLiveCatSinging(){
+		Bird parrot=new Parrot();
+		parrot.setSingBehavior(new Meow());
+		parrot.sing();
+	}
+	
+	/**
+	 * Method to test sing() method of Parrot living near rooster
+	 */
+	@Test
+	public void testParrotLiveRoosterSinging(){
+		Bird parrot=new Parrot();
+		parrot.setSingBehavior(new CockDoodle());
+		parrot.sing();
 	}
 	
 }

@@ -6,8 +6,10 @@ import com.assignment.model.Animal;
 import com.assignment.model.Bird;
 import com.assignment.model.Chicken;
 import com.assignment.model.Duck;
+import com.assignment.model.Rooster;
 import com.assignment.model.support.BirdSinging;
 import com.assignment.model.support.Cluck;
+import com.assignment.model.support.CockDoodle;
 import com.assignment.model.support.NoFly;
 import com.assignment.model.support.Quack;
 
@@ -68,6 +70,14 @@ public class AnimalBehaviorUnitTest {
 		chicken.fly();
 	}
 	
-	
+	/**
+	 * Method to test sing() method of Rooster
+	 */
+	@Test
+	public void testRoosterSinging(){
+		Chicken rooster=new Rooster();
+		rooster.setSingBehavior(new CockDoodle());
+		rooster.sing();
+	}
 	
 }

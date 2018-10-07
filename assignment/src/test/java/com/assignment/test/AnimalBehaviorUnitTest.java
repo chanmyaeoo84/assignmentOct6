@@ -5,10 +5,12 @@ import org.junit.Test;
 import com.assignment.model.Animal;
 import com.assignment.model.Bird;
 import com.assignment.model.Chicken;
+import com.assignment.model.ClownFish;
 import com.assignment.model.Duck;
 import com.assignment.model.Fish;
 import com.assignment.model.Parrot;
 import com.assignment.model.Rooster;
+import com.assignment.model.Shark;
 import com.assignment.model.support.BirdSinging;
 import com.assignment.model.support.Cluck;
 import com.assignment.model.support.CockDoodle;
@@ -143,6 +145,32 @@ public class AnimalBehaviorUnitTest {
 	public void testFishSwimming(){
 		Animal fish=new Fish();
 		fish.swim();
+	}
+	
+	/**
+	 * Method to test Shark behavior and properties
+	 */
+	@Test
+	public void testShark(){
+		Fish shark=new Shark();
+		((Shark)shark).eatFish();
+		
+		System.out.println("Size is "+shark.getSize());
+		
+		System.out.println("Color is "+shark.getColor());
+	}
+	
+	/**
+	 * Method to test Clownfish behavior and properties
+	 */
+	@Test
+	public void testClownFish(){
+		Fish clownFish=new ClownFish();
+		((ClownFish)clownFish).joke();
+		
+		System.out.println("Size is "+clownFish.getSize());
+		
+		System.out.println("Color is "+clownFish.getColor());
 	}
 	
 }

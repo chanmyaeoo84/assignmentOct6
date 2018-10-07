@@ -10,7 +10,7 @@ import com.assignment.model.support.SingBehavior;
  */
 public class Animal {
 	protected SingBehavior singBehavior;
-
+	
 	public Animal() {
 
 	}
@@ -21,6 +21,10 @@ public class Animal {
 
 	public void sing() {
 		singBehavior.sing();
+	}
+	
+	public void swim() {
+		System.out.println("I am swimming.");
 	}
 
 	public void setSingBehavior(SingBehavior singBehavior) {
